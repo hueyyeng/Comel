@@ -11,6 +11,7 @@ REQUIREMENTS = [
     "PySide6",
 ]
 EXCLUDE_FOLDERS = [
+    "docs",
     "examples",
     "qss",
     "tests",
