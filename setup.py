@@ -50,6 +50,6 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Operating System :: MacOS",
         "Operating System :: POSIX :: Linux",
-        "Operating System :: Windows :: Windows 10",
+        "Operating System :: Microsoft :: Windows :: Windows 10",
     ]
 )
