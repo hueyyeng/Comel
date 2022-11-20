@@ -1,0 +1,2 @@
+darkdetect==0.7.1
+PySide6

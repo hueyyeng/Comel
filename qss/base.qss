@@ -1,0 +1,103 @@
+/*  ------------------------------------------------------------------------  */
+/* Comel Base CSS - https://github.com/hueyyeng/Comel
+/* By Huey Yeng
+/*  ------------------------------------------------------------------------  */
+
+* {
+  color: ${baseFontColor};
+}
+
+QWidget {
+  background-color: ${baseBackgroundColor};
+}
+
+QWidget:disabled {
+  color: ${disabledFontColor};
+  background-color: ${disabledBackgroundColor};
+}
+
+QToolTip {
+  background-color: ${tooltipBackgroundColor};
+  color: ${tooltipFontColor};
+}
+
+QMenuBar {
+  border-bottom: 1px solid ${menubarBorderColor};
+}
+
+QMenuBar::item {
+  padding: 7px;
+}
+
+QMenu::item {
+  background-color: ${menuItemBackgroundColor};
+}
+
+QMenu::item:selected, QMenuBar::item:selected {
+  color: ${menuItemSelectedColor};
+  background-color: ${menuItemSelectedBackgroundColor};
+}
+
+QMenu {
+  border: 1px solid ${menuBorderColor};
+}
+
+::section {
+  background-color: ${sectionBackgroundColor};
+}
+
+QListView, QTableView, QTreeView {
+  background-color: ${viewBackgroundColor};
+}
+
+QPushButton {
+  border: 1px solid ${buttonBorderColor};
+  min-width: 80px;
+  padding: 4px;
+}
+
+QProgressBar {
+  background-color: ${progressbarBackgroundColor};
+  border: 1px solid ${progressbarBorderColor};
+  text-align: center;
+}
+
+QProgressBar::chunk {
+  background-color: ${progressbarChunkBackgroundColor};
+  width: 10px;
+}
+
+QComboBox {
+  background-color: ${comboboxBackgroundColor};
+  border: 1px solid ${comboboxBorderColor};
+  padding: 3px;
+  selection-background-color: ${comboboxSelectionBackgroundColor};
+}
+
+QSpinBox {
+  background-color: ${spinboxBackgroundColor};
+  border-width: 4;
+}
+
+QTextEdit, QLineEdit {
+  background-color: ${textInputBackgroundColor};
+  border: 1px solid ${textInputBorderColor};
+}
+
+QTabWidget::pane {
+  border: 1px solid ${tabwidgetBorderColor};
+}
+
+QTabBar::tab {
+  border: 1px solid ${tabBorderColor};
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  min-width: 40px;
+  padding: 4px;
+}
+
+QStatusBar {
+  border-top: 1px solid ${statusbarBorderColor};
+  min-height: 24px;
+}
