@@ -32,6 +32,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=README,
     packages=find_packages(where=str(PROJECT_ROOT), exclude=EXCLUDE_FOLDERS),
+    include_package_data=True,
     install_requires=REQUIREMENTS,
     python_requires=">=3.7",
     keywords=[
