@@ -19,7 +19,7 @@ Last tested with **Python 3.8.10** but any Python version that PySide6 supports.
 ### Install using pip
 
 ```shell
-pip install comel
+pip install Comel
 ```
 
 ### Cloning this repo
