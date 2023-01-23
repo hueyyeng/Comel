@@ -50,10 +50,26 @@ QListView, QTableView, QTreeView {
   background-color: rgb(85, 90, 95);
 }
 
+QHeaderView::section:hover {
+  background-color: rgb(165, 170, 180);
+}
+
+QHeaderView::section:pressed {
+  background-color: rgb(160, 160, 160);
+}
+
 QPushButton {
   border: 1px solid gray;
   min-width: 80px;
   padding: 4px;
+}
+
+QPushButton:hover {
+  background-color: rgb(160, 170, 175);
+}
+
+QPushButton:pressed {
+  background-color: rgb(200, 210, 215);
 }
 
 QProgressBar {
@@ -95,6 +111,14 @@ QTabBar::tab {
   border-top-right-radius: 4px;
   min-width: 40px;
   padding: 4px;
+}
+
+QTabBar::tab:hover {
+  background-color: rgb(160, 170, 175);
+}
+
+QTabBar::tab:pressed {
+  background-color: rgb(200, 210, 215);
 }
 
 QStatusBar {
