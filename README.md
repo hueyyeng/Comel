@@ -42,6 +42,13 @@ python examples/barebone_app.py
 python examples/takusan_app.py
 ```
 
+## Customizing Qt Style Sheets (QSS)
+
+> Refer to https://doc.qt.io/qt-6/stylesheet-examples.html for examples on the correct CSS selectors. Search on Stack Overflow/Qt Forum/etc if you cannot find the specific CSS selectors.
+
+1. Edit `base.qss` and `presets.py` with the relevant variable and color.
+2. Run `generate_qss.py` to generate `light.qss` and `dark.qss` located in `qss/themes` and `comel/themes` folder.
+
 ## Known Issues
 
 1. The default Qt arrow icons does not play nicely when using Qt Style Sheets. While there is a way to bundle custom icons, I'm not fancy with the extra steps needed to compile Qt `.qrc` into Python file. I might create wrapper class for the affected widgets in future updates.
