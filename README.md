@@ -52,7 +52,6 @@ python examples/takusan_app.py
 ## Known Issues
 
 1. The default Qt arrow icons does not play nicely when using Qt Style Sheets. While there is a way to bundle custom icons, I'm not fancy with the extra steps needed to compile Qt `.qrc` into Python file. I might create wrapper class for the affected widgets in future updates.
-2. Pressed state style is not yet implemented.
 
 ## Why Comel?
 
