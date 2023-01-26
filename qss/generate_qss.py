@@ -12,6 +12,10 @@ def generate_light_qss():
         text = base_qss.substitute(**preset.light())
         output.write(text)
 
+    with open("../comel/themes/light.qss", "w") as output:
+        text = base_qss.substitute(**preset.light())
+        output.write(text)
+
 
 def generate_dark_qss():
     with open("base.qss", "r") as source:
@@ -19,6 +23,10 @@ def generate_dark_qss():
 
     preset = Preset()
     with open("themes/dark.qss", "w") as output:
+        text = base_qss.substitute(**preset.dark())
+        output.write(text)
+
+    with open("../comel/themes/dark.qss", "w") as output:
         text = base_qss.substitute(**preset.dark())
         output.write(text)
 

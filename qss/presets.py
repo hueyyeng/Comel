@@ -25,6 +25,22 @@ class Preset:
         light="lightgray",
         dark="gray",
     )
+    hoverBackgroundColor: PresetValue = PresetValue(
+        light="rgb(220, 230, 235)",
+        dark="rgb(160, 170, 175)",
+    )
+    pressedBackgroundColor: PresetValue = PresetValue(
+        light="rgb(190, 200, 205)",
+        dark="rgb(200, 210, 215)",
+    )
+    tableHeaderHoverBackgroundColor: PresetValue = PresetValue(
+        light="rgb(200, 220, 230)",
+        dark="rgb(165, 170, 180)",
+    )
+    tableHeaderPressedBackgroundColor: PresetValue = PresetValue(
+        light="rgb(170, 170, 170)",
+        dark="rgb(160, 160, 160)",
+    )
     tooltipBackgroundColor: PresetValue = PresetValue(
         light="rgb(240, 240, 240)",
         dark="rgb(240, 240, 240)",
