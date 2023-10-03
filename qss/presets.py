@@ -15,15 +15,27 @@ class Preset:
     ))
     baseBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(240, 240, 240)",
-        dark="#31363b",
+        dark="rgb(49, 54, 59)",
     ))
     disabledFontColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="gray",
-        dark="lightgray",
+        light="lightgray",
+        dark="rgb(89, 94, 99)",
     ))
     disabledBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="lightgray",
-        dark="gray",
+        light="rgb(240, 240, 240)",
+        dark="rgb(49, 54, 59)",
+    ))
+    disabledCheckBoxBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(250, 250, 250)",
+        dark="rgb(75, 80, 85)",
+    ))
+    viewSelectionBackgroundColor: PresetValue = field(default_factory=lambda: PresetValue(
+        light="rgb(230, 239, 253)",
+        dark="rgb(120, 135, 155)",
+    ))
+    viewSelectionDisabledBackgroundColor: PresetValue = field(default_factory=lambda: PresetValue(
+        light="rgb(230, 239, 253)",
+        dark="rgb(130, 140, 145)",
     ))
     hoverBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(215, 230, 240)",
@@ -33,13 +45,37 @@ class Preset:
         light="rgb(190, 200, 205)",
         dark="rgb(200, 210, 215)",
     ))
+    tableHeaderBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="darkgray",
+        dark="rgb(50, 50, 50)",
+    ))
+    tableHeaderGradientStartColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(235, 235, 235)",
+        dark="rgb(105, 115, 125)",
+    ))
+    tableHeaderGradientEndColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(220, 220, 220)",
+        dark="rgb(85, 95, 100)",
+    ))
+    tableHeaderDisabledGradientStartColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(240, 240, 240)",
+        dark="rgb(60, 65, 70)",
+    ))
+    tableHeaderDisabledGradientEndColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(220, 220, 220)",
+        dark="rgb(45, 50, 55)",
+    ))
     tableHeaderHoverBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="rgb(215, 230, 240)",
+        light="rgb(230, 240, 255)",
         dark="rgb(130, 140, 145)",
     ))
     tableHeaderPressedBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="rgb(170, 170, 170)",
-        dark="rgb(160, 160, 160)",
+        light="rgb(15, 15, 235)",
+        dark="rgb(45, 85, 235)",
+    ))
+    tableHeaderPressedFontColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="white",
+        dark="white",
     ))
     tooltipBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(240, 240, 240)",
@@ -55,7 +91,7 @@ class Preset:
     ))
     menuItemBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(240, 240, 240)",
-        dark="#31363b",
+        dark="rgb(49, 54, 59)",
     ))
     menuItemSelectedColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="white",
@@ -128,6 +164,22 @@ class Preset:
     statusbarBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="darkgray",
         dark="darkgray",
+    ))
+    scrollbarBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="transparent",
+        dark="transparent",
+    ))
+    scrollbarHandleColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="lightgray",
+        dark="darkgray",
+    ))
+    scrollbarBackgroundDisabledColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="transparent",
+        dark="rgb(85, 90, 95)",
+    ))
+    scrollbarHandleDisabledColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="lightgray",
+        dark="gray",
     ))
 
     def light(self) -> dict:

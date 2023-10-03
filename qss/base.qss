@@ -13,7 +13,7 @@ QWidget {
 
 QWidget:disabled {
   color: ${disabledFontColor};
-  background-color: ${disabledBackgroundColor};
+  border-color: ${disabledFontColor};
 }
 
 QToolTip {
@@ -48,6 +48,34 @@ QMenu {
 
 QListView, QTableView, QTreeView {
   background-color: ${viewBackgroundColor};
+  selection-color: ${baseFontColor};
+  selection-background-color: ${viewSelectionBackgroundColor};
+}
+
+QListView:disabled, QTableView:disabled, QTreeView:disabled {
+  background-color: ${disabledBackgroundColor};
+  selection-color: ${disabledFontColor};
+  selection-background-color: ${viewSelectionDisabledBackgroundColor};
+}
+
+QHeaderView::section {
+  border: 1px solid ${tableHeaderBorderColor};
+  border-top: none;
+  border-left: none;
+  padding-left: 4px;
+  background-color: qlineargradient(
+    x1:0, y1:0, x2:0, y2:1,
+    stop:0 ${tableHeaderGradientStartColor}, stop:1.0 ${tableHeaderGradientEndColor});;
+}
+
+QHeaderView::section:disabled {
+  border: 1px solid ${tableHeaderBorderColor};
+  border-top: none;
+  border-left: none;
+  padding-left: 4px;
+  background-color: qlineargradient(
+    x1:0, y1:0, x2:0, y2:1,
+    stop:0 ${tableHeaderDisabledGradientStartColor}, stop:1.0 ${tableHeaderDisabledGradientEndColor});;
 }
 
 QHeaderView::section:hover {
@@ -55,6 +83,7 @@ QHeaderView::section:hover {
 }
 
 QHeaderView::section:pressed {
+  color: ${tableHeaderPressedFontColor};
   background-color: ${tableHeaderPressedBackgroundColor};
 }
 
@@ -82,11 +111,20 @@ QProgressBar::chunk {
   width: 10px;
 }
 
+QCheckBox::indicator:disabled {
+  background-color: ${disabledCheckBoxBackgroundColor};
+}
+
 QComboBox {
   background-color: ${comboboxBackgroundColor};
   border: 1px solid ${comboboxBorderColor};
   padding: 3px;
   selection-background-color: ${comboboxSelectionBackgroundColor};
+}
+
+QComboBox:disabled {
+  background-color: ${disabledBackgroundColor};
+  border: 1px solid ${disabledFontColor};
 }
 
 QSpinBox {
@@ -97,6 +135,11 @@ QSpinBox {
 QPlainTextEdit, QTextEdit, QLineEdit {
   background-color: ${textInputBackgroundColor};
   border: 1px solid ${textInputBorderColor};
+}
+
+QPlainTextEdit:disabled, QTextEdit:disabled, QLineEdit:disabled {
+  background-color: ${disabledBackgroundColor};
+  border: 1px solid ${disabledFontColor};
 }
 
 QTabWidget::pane {
@@ -122,4 +165,58 @@ QTabBar::tab:pressed {
 QStatusBar {
   border-top: 1px solid ${statusbarBorderColor};
   min-height: 24px;
+}
+
+QScrollArea {
+  border: none;
+}
+
+QScrollBar {
+  background: ${scrollbarBackgroundColor};
+  border-radius: 5px;
+}
+
+QScrollBar:disabled {
+  background: ${scrollbarBackgroundDisabledColor};
+  border-radius: 5px;
+}
+
+QScrollBar:horizontal {
+  height: 10px;
+}
+
+QScrollBar:vertical {
+  width: 10px;
+}
+
+QScrollBar::handle {
+  background: ${scrollbarHandleColor};
+  border-radius: 5px;
+}
+
+QScrollBar::handle:disabled {
+  background: ${scrollbarHandleDisabledColor};
+  border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal {
+  height: 25px;
+  min-width: 10px;
+}
+
+QScrollBar::handle:vertical {
+  width: 25px;
+  min-height: 10px;
+}
+
+QScrollBar::add-line, QScrollBar::sub-line {
+  border: none;
+}
+
+QScrollBar::add-page, QScrollBar::sub-page {
+  background: ${scrollbarBackgroundColor};
+}
+
+QAbstractScrollArea::corner {
+  background: ${scrollbarBackgroundColor};
 }

@@ -8,12 +8,12 @@
 }
 
 QWidget {
-  background-color: #31363b;
+  background-color: rgb(49, 54, 59);
 }
 
 QWidget:disabled {
-  color: lightgray;
-  background-color: gray;
+  color: rgb(89, 94, 99);
+  border-color: rgb(89, 94, 99);
 }
 
 QToolTip {
@@ -30,7 +30,7 @@ QMenuBar::item {
 }
 
 QMenu::item {
-  background-color: #31363b;
+  background-color: rgb(49, 54, 59);
 }
 
 QMenu::item:selected, QMenuBar::item:selected {
@@ -48,6 +48,34 @@ QMenu {
 
 QListView, QTableView, QTreeView {
   background-color: rgb(85, 90, 95);
+  selection-color: #ffffff;
+  selection-background-color: rgb(120, 135, 155);
+}
+
+QListView:disabled, QTableView:disabled, QTreeView:disabled {
+  background-color: rgb(49, 54, 59);
+  selection-color: rgb(89, 94, 99);
+  selection-background-color: rgb(130, 140, 145);
+}
+
+QHeaderView::section {
+  border: 1px solid rgb(50, 50, 50);
+  border-top: none;
+  border-left: none;
+  padding-left: 4px;
+  background-color: qlineargradient(
+    x1:0, y1:0, x2:0, y2:1,
+    stop:0 rgb(105, 115, 125), stop:1.0 rgb(85, 95, 100));;
+}
+
+QHeaderView::section:disabled {
+  border: 1px solid rgb(50, 50, 50);
+  border-top: none;
+  border-left: none;
+  padding-left: 4px;
+  background-color: qlineargradient(
+    x1:0, y1:0, x2:0, y2:1,
+    stop:0 rgb(60, 65, 70), stop:1.0 rgb(45, 50, 55));;
 }
 
 QHeaderView::section:hover {
@@ -55,7 +83,8 @@ QHeaderView::section:hover {
 }
 
 QHeaderView::section:pressed {
-  background-color: rgb(160, 160, 160);
+  color: white;
+  background-color: rgb(45, 85, 235);
 }
 
 QPushButton {
@@ -82,11 +111,20 @@ QProgressBar::chunk {
   width: 10px;
 }
 
+QCheckBox::indicator:disabled {
+  background-color: rgb(75, 80, 85);
+}
+
 QComboBox {
   background-color: rgb(85, 90, 95);
   border: 1px solid darkgray;
   padding: 3px;
   selection-background-color: dodgerblue;
+}
+
+QComboBox:disabled {
+  background-color: rgb(49, 54, 59);
+  border: 1px solid rgb(89, 94, 99);
 }
 
 QSpinBox {
@@ -97,6 +135,11 @@ QSpinBox {
 QPlainTextEdit, QTextEdit, QLineEdit {
   background-color: rgb(85, 90, 95);
   border: 1px solid gray;
+}
+
+QPlainTextEdit:disabled, QTextEdit:disabled, QLineEdit:disabled {
+  background-color: rgb(49, 54, 59);
+  border: 1px solid rgb(89, 94, 99);
 }
 
 QTabWidget::pane {
@@ -122,4 +165,58 @@ QTabBar::tab:pressed {
 QStatusBar {
   border-top: 1px solid darkgray;
   min-height: 24px;
+}
+
+QScrollArea {
+  border: none;
+}
+
+QScrollBar {
+  background: transparent;
+  border-radius: 5px;
+}
+
+QScrollBar:disabled {
+  background: rgb(85, 90, 95);
+  border-radius: 5px;
+}
+
+QScrollBar:horizontal {
+  height: 10px;
+}
+
+QScrollBar:vertical {
+  width: 10px;
+}
+
+QScrollBar::handle {
+  background: darkgray;
+  border-radius: 5px;
+}
+
+QScrollBar::handle:disabled {
+  background: gray;
+  border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal {
+  height: 25px;
+  min-width: 10px;
+}
+
+QScrollBar::handle:vertical {
+  width: 25px;
+  min-height: 10px;
+}
+
+QScrollBar::add-line, QScrollBar::sub-line {
+  border: none;
+}
+
+QScrollBar::add-page, QScrollBar::sub-page {
+  background: transparent;
+}
+
+QAbstractScrollArea::corner {
+  background: transparent;
 }

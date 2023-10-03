@@ -1,3 +1,4 @@
+from pathlib import Path
 from string import Template
 
 from presets import Preset
@@ -8,13 +9,14 @@ def generate_light_qss():
         base_qss = Template(source.read())
 
     preset = Preset()
-    with open("themes/light.qss", "w") as output:
-        text = base_qss.substitute(**preset.light())
-        output.write(text)
+    text = base_qss.substitute(**preset.light())
 
-    with open("../comel/themes/light.qss", "w") as output:
-        text = base_qss.substitute(**preset.light())
-        output.write(text)
+    qss = Path("themes/light.qss")
+    qss.parent.mkdir(exist_ok=True)
+    qss.write_text(text)
+
+    export_qss = Path("../comel/themes/light.qss")
+    export_qss.write_text(text)
 
 
 def generate_dark_qss():
@@ -22,13 +24,14 @@ def generate_dark_qss():
         base_qss = Template(source.read())
 
     preset = Preset()
-    with open("themes/dark.qss", "w") as output:
-        text = base_qss.substitute(**preset.dark())
-        output.write(text)
+    text = base_qss.substitute(**preset.dark())
 
-    with open("../comel/themes/dark.qss", "w") as output:
-        text = base_qss.substitute(**preset.dark())
-        output.write(text)
+    qss = Path("themes/dark.qss")
+    qss.parent.mkdir(exist_ok=True)
+    qss.write_text(text)
+
+    export_qss = Path("../comel/themes/dark.qss")
+    export_qss.write_text(text)
 
 
 def main():
