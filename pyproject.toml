@@ -1,0 +1,52 @@
+[project]
+name = "Comel"
+description = "Opinionated PySide6 Light/Dark Theme Toggler."
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+keywords = [
+    "python",
+    "library",
+    "qt",
+    "widgets",
+    "development",
+]
+authors = [
+    {name = "Huey Yeng", email = "huey.yeng.mmu@gmail.com"}
+]
+maintainers = [
+    {name = "Huey Yeng", email = "huey.yeng.mmu@gmail.com"}
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.7",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Operating System :: Microsoft :: Windows :: Windows 11",
+]
+dynamic = [
+    "version",
+    "dependencies",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/hueyyeng/Comel"
+"Bug Reports" = "https://github.com/hueyyeng/Comel/issues"
+"Source" = "https://github.com/hueyyeng/Comel"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "comel.__version__"}
+dependencies = {file = "requirements.txt"}
+
+[tool.setuptools.packages.find]
+include = ["comel*"]
+namespaces = false
