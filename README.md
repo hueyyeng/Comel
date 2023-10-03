@@ -1,6 +1,7 @@
 # Comel
 
-Opinionated PySide6 Light/Dark Theme Toggler. Oh wait yet another ~~Qt for Python~~ PySide6 light/dark theme package? Yes it is!
+Opinionated PySide6 Light/Dark Theme Toggler. Oh wait yet another ~~Qt for Python~~ PySide6 light/dark theme package?
+Yes it is!
 
 ![](docs/images/comel_takusan.gif)
 
@@ -8,13 +9,15 @@ Opinionated PySide6 Light/Dark Theme Toggler. Oh wait yet another ~~Qt for Pytho
 
 ## Features
 
-1. Custom QMainWindow widget with built-in light/dark mode toggler. Connect the `toggle_theme` function to QtWidgets callback function and you're done.
+1. Custom QMainWindow widget with built-in light/dark mode toggler. Connect the `toggle_theme` function to QtWidgets
+   callback function and you're done.
 2. No icons handling! ~~I'm actually lazy~~ I decided that icons should be the responsibility of the developer.
 3. Very simple package (for now). Not bloated from trying to cater various Qt for Python packages.
 
 ## Getting Started
 
-Last tested with **Python 3.8.10** but any Python version that PySide6 supports. Highly recommend using virtual environment when testing/implementing this.
+Last tested with **Python 3.8.10** but any Python version that PySide6 supports. Highly recommend using virtual
+environment when testing/implementing this.
 
 ### Install using pip
 
@@ -24,13 +27,15 @@ pip install Comel
 
 ### Cloning this repo
 
-Clone this repo and copy the `comel` package into your project. Ensure both `darkdetect` and `PySide6` is installed in your Python environment. 
+Clone this repo and copy the `comel` package into your project. Ensure both `darkdetect` and `PySide6` is installed in
+your Python environment.
 
 ## Usage
 
 Import `ComelMainWindowWrapper` class and connect `toggle_theme` to a widget action. That's it!
 
-Refer to examples directory for `barebone_app.py` for boilerplate code or `takusan_app.py` for a typical PySide app written from scratch without using Qt Designer.
+Refer to examples directory for `barebone_app.py` for boilerplate code or `takusan_app.py` for a typical PySide app
+written from scratch without using Qt Designer.
 
 ## Examples
 
@@ -40,24 +45,33 @@ python examples/barebone_app.py
 
 # Takusan app
 python examples/takusan_app.py
+
+# Run this for normal and disabled state comparison 
+python examples/check_disabled_state_app.py
 ```
 
 ## Customizing Qt Style Sheets (QSS)
 
-> Refer to https://doc.qt.io/qt-6/stylesheet-examples.html for examples on the correct CSS selectors. Search on Stack Overflow/Qt Forum/etc if you cannot find the specific CSS selectors.
+> Refer to https://doc.qt.io/qt-6/stylesheet-examples.html for examples on the correct CSS selectors. Search on Stack
+> Overflow/Qt Forum/etc if you cannot find the specific CSS selectors.
 
 1. Edit `base.qss` and `presets.py` with the relevant variable and color.
 2. Run `generate_qss.py` to generate `light.qss` and `dark.qss` located in `qss/themes` and `comel/themes` folder.
 
 ## Known Issues
 
-1. The default Qt arrow icons does not play nicely when using Qt Style Sheets. While there is a way to bundle custom icons, I'm not fancy with the extra steps needed to compile Qt `.qrc` into Python file. I might create wrapper class for the affected widgets in future updates.
+1. The default Qt arrow icons does not play nicely when using Qt Style Sheets. While there is a way to bundle custom
+   icons, I'm not fancy with the extra steps needed to compile Qt `.qrc` into Python file. I might create wrapper class
+   for the affected widgets in future updates.
+2. This library does not cover every single widget styles. Create an issue if you encounter a widget that is missing
+   either light or dark styling.
 
 ## Why Comel?
 
 ![](examples/icons/icons8-fat-cat-96.png)
 
-Qt is pronounced as "cute". Comel means **cute** in Bahasa Melayu aka Malay language. Also, the name of my childhood cat.
+Qt is pronounced as "cute". Comel means **cute** in Bahasa Melayu aka Malay language. Also, the name of my childhood
+cat.
 
 ## Credits
 
