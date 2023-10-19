@@ -92,6 +92,16 @@ QPushButton {
   padding: 4px;
 }
 
+QPushButton:default {
+  background-color: ${defaultButtonBackgroundColor};
+  color: ${defaultButtonFontColor};
+  font-weight: bold;
+}
+
+QPushButton:default:hover {
+  background-color: ${defaultButtonHoverBackgroundColor};
+}
+
 QPushButton:hover {
   background-color: ${hoverBackgroundColor};
 }
