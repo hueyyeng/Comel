@@ -139,6 +139,15 @@ class CheckDisabledStateApp(ComelMainWindowWrapper):
         toggle_theme_btn.clicked.connect(self.run_toggle_theme)
         layout.addWidget(toggle_theme_btn)
 
+        default_btn = QPushButton("Default Button")
+        default_btn.setDefault(True)
+        layout.addWidget(default_btn)
+
+        default_disabled_btn = QPushButton("Default Button Disabled")
+        default_disabled_btn.setDefault(True)
+        default_disabled_btn.setEnabled(False)
+        layout.addWidget(default_disabled_btn)
+
         self.compare_widget = HorizontalLayoutWidget(self)
         layout.addWidget(self.compare_widget)
 

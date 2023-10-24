@@ -98,6 +98,12 @@ QPushButton:default {
   font-weight: bold;
 }
 
+QPushButton:default:disabled {
+  background-color: rgb(188, 200, 212);
+  color: rgb(240, 240, 240);
+  border: 1px solid lightgray;
+}
+
 QPushButton:default:hover {
   background-color: rgb(106, 170, 234);
 }

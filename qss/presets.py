@@ -121,6 +121,10 @@ class Preset:
         light="rgb(79, 139, 200)",
         dark="rgb(79, 139, 200)",
     ))
+    defaultButtonDisabledBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(188, 200, 212)",
+        dark="rgb(77, 99, 121)",
+    ))
     defaultButtonHoverBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(106, 170, 234)",
         dark="rgb(106, 170, 234)",
@@ -128,6 +132,10 @@ class Preset:
     defaultButtonFontColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="white",
         dark="white",
+    ))
+    defaultButtonDisabledFontColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(240, 240, 240)",
+        dark="rgb(150, 150, 150)",
     ))
     progressbarBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="white",
