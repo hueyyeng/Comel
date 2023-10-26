@@ -88,7 +88,7 @@ QHeaderView::section:hover {
 
 QHeaderView::section:pressed {
   color: white;
-  background-color: rgb(15, 15, 235);
+  background-color: rgb(96, 159, 250);
 }
 
 QPushButton {
@@ -127,7 +127,7 @@ QProgressBar {
 }
 
 QProgressBar::chunk {
-  background-color: powderblue;
+  background-color: rgb(182, 227, 255);
   width: 10px;
 }
 

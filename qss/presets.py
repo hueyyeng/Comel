@@ -70,7 +70,7 @@ class Preset:
         dark="rgb(130, 140, 145)",
     ))
     tableHeaderPressedBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="rgb(15, 15, 235)",
+        light="rgb(96, 159, 250)",
         dark="rgb(45, 85, 235)",
     ))
     tableHeaderPressedFontColor: PresetValue = field(default_factory=lambda:PresetValue(
@@ -146,8 +146,8 @@ class Preset:
         dark="darkgray",
     ))
     progressbarChunkBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="powderblue",
-        dark="rgb(30, 50, 75)",
+        light="rgb(182, 227, 255)",
+        dark="rgb(25, 63, 140)",
     ))
     comboboxBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="white",
