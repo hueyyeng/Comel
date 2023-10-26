@@ -161,6 +161,14 @@ class Preset:
         light="lightskyblue",
         dark="dodgerblue",
     ))
+    groupboxBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="darkgray",
+        dark="lightgray",
+    ))
+    groupboxBorderDisabledColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="lightgray",
+        dark="rgb(89, 94, 99)",
+    ))
     spinboxBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="white",
         dark="rgb(85, 90, 95)",
@@ -180,6 +188,18 @@ class Preset:
     tabBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="darkgray",
         dark="darkgray",
+    ))
+    tabBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(220, 220, 220)",
+        dark="rgb(58, 63, 68)",
+    ))
+    tabSelectedBackgroundGradientStartColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(255, 255, 255)",
+        dark="rgb(125, 135, 145)",
+    ))
+    tabSelectedBackgroundGradientEndColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(224, 224, 224)",
+        dark="rgb(105, 115, 125)",
     ))
     statusbarBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="darkgray",

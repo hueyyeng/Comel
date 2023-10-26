@@ -65,7 +65,9 @@ QHeaderView::section {
   padding-left: 4px;
   background-color: qlineargradient(
     x1:0, y1:0, x2:0, y2:1,
-    stop:0 ${tableHeaderGradientStartColor}, stop:1.0 ${tableHeaderGradientEndColor});;
+    stop:0 ${tableHeaderGradientStartColor},
+    stop:1.0 ${tableHeaderGradientEndColor}
+  );
 }
 
 QHeaderView::section:disabled {
@@ -75,7 +77,9 @@ QHeaderView::section:disabled {
   padding-left: 4px;
   background-color: qlineargradient(
     x1:0, y1:0, x2:0, y2:1,
-    stop:0 ${tableHeaderDisabledGradientStartColor}, stop:1.0 ${tableHeaderDisabledGradientEndColor});;
+    stop:0 ${tableHeaderDisabledGradientStartColor},
+    stop:1.0 ${tableHeaderDisabledGradientEndColor}
+  );
 }
 
 QHeaderView::section:hover {
@@ -143,6 +147,22 @@ QComboBox:disabled {
   border: 1px solid ${disabledFontColor};
 }
 
+QGroupBox {
+  border: 1px solid ${groupboxBorderColor};
+  margin-top: 7px;
+  padding-top: 7px;
+}
+
+QGroupBox:disabled {
+  border: 1px solid ${groupboxBorderDisabledColor};
+}
+
+QGroupBox::title {
+  subcontrol-origin: margin;
+  left: 10px;
+  padding: 0 3px 0 3px;
+}
+
 QSpinBox {
   background-color: ${spinboxBackgroundColor};
   border-width: 4;
@@ -163,10 +183,12 @@ QTabWidget::pane {
 }
 
 QTabBar::tab {
+  background-color: ${tabBackgroundColor};
   border: 1px solid ${tabBorderColor};
   border-bottom: none;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+  min-width: 14ex;
   padding: 4px;
 }
 
@@ -176,6 +198,18 @@ QTabBar::tab:hover {
 
 QTabBar::tab:pressed {
   background-color: ${pressedBackgroundColor};
+}
+
+QTabBar::tab:selected {
+  background-color: qlineargradient(
+    x1:0, y1:0, x2:0, y2:1,
+    stop:0 ${tabSelectedBackgroundGradientStartColor},
+    stop:1.0 ${tabSelectedBackgroundGradientEndColor}
+  );
+}
+
+QTabBar::tab:!selected {
+  margin-top: 2px;
 }
 
 QStatusBar {
