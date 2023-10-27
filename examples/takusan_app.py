@@ -4,6 +4,7 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
+from comel.widgets import CCheckBox
 from comel.wrapper import ComelMainWindowWrapper
 
 
@@ -35,6 +36,7 @@ class TakusanApp(ComelMainWindowWrapper):
         side_layout.addWidget(self.theme_label)
 
         toggle_theme_btn = QPushButton("Toggle Theme")
+        toggle_theme_btn.setDefault(True)
         toggle_theme_btn.clicked.connect(self.run_toggle_theme)
         side_layout.addWidget(toggle_theme_btn)
 
@@ -101,7 +103,7 @@ class TakusanApp(ComelMainWindowWrapper):
         age_spinbox = QSpinBox()
         form_layout.addRow("Age:", age_spinbox)
 
-        knows_japanese_checkbox = QCheckBox()
+        knows_japanese_checkbox = CCheckBox()
         form_layout.addRow("Knows Japanese?", knows_japanese_checkbox)
 
         tab_layout = QVBoxLayout()

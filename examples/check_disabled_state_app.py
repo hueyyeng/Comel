@@ -5,6 +5,7 @@ from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 from PySide6.QtWidgets import QSizePolicy as QSP
 
+from comel.widgets import CCheckBox
 from comel.wrapper import ComelMainWindowWrapper
 
 
@@ -49,10 +50,10 @@ class GreatestHitGroupBox(VerticalGroupBox):
         self.text_label = QLabel("Text Label")
         self.addWidget(self.text_label)
 
-        self.unchecked_checkbox = QCheckBox("Unchecked")
+        self.unchecked_checkbox = CCheckBox("Unchecked")
         self.addWidget(self.unchecked_checkbox)
 
-        self.checked_checkbox = QCheckBox("Checked")
+        self.checked_checkbox = CCheckBox("Checked")
         self.checked_checkbox.setChecked(True)
         self.addWidget(self.checked_checkbox)
 

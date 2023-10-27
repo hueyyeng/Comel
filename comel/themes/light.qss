@@ -135,6 +135,31 @@ QCheckBox::indicator:disabled {
   background-color: rgb(250, 250, 250);
 }
 
+QCheckBox::indicator::checked {
+  image: url(cicons:checked.png);
+  background-color: white;
+  border: 1px solid gray;
+  padding: 2px;
+}
+
+QCheckBox::indicator::checked:disabled {
+  image: url(cicons:checked-disabled.png);
+  background-color: rgb(250, 250, 250);
+  border: 1px solid lightgray;
+}
+
+QCheckBox::indicator::unchecked {
+  background-color: white;
+  border: 1px solid gray;
+  padding: 2px;
+}
+
+QCheckBox::indicator::unchecked:disabled {
+  background-color: rgb(250, 250, 250);
+  border: 1px solid lightgray;
+  padding: 2px;
+}  
+
 QComboBox {
   background-color: white;
   border: 1px solid darkgray;

@@ -132,8 +132,33 @@ QProgressBar::chunk {
 }
 
 QCheckBox::indicator:disabled {
-  background-color: ${disabledCheckBoxBackgroundColor};
+  background-color: ${checkboxDisabledBackgroundColor};
 }
+
+QCheckBox::indicator::checked {
+  image: url(cicons:${checkboxImageFile});
+  background-color: ${checkboxBackgroundColor};
+  border: 1px solid ${baseBorderColor};
+  padding: 2px;
+}
+
+QCheckBox::indicator::checked:disabled {
+  image: url(cicons:${checkboxDisabledImageFile});
+  background-color: ${checkboxDisabledBackgroundColor};
+  border: 1px solid ${baseDisabledBorderColor};
+}
+
+QCheckBox::indicator::unchecked {
+  background-color: ${checkboxBackgroundColor};
+  border: 1px solid ${baseBorderColor};
+  padding: 2px;
+}
+
+QCheckBox::indicator::unchecked:disabled {
+  background-color: ${checkboxDisabledBackgroundColor};
+  border: 1px solid ${baseDisabledBorderColor};
+  padding: 2px;
+}  
 
 QComboBox {
   background-color: ${comboboxBackgroundColor};

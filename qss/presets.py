@@ -17,6 +17,15 @@ class Preset:
         light="rgb(240, 240, 240)",
         dark="rgb(49, 54, 59)",
     ))
+    # TODO: Replace all specific widgets border/bg color
+    baseBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="gray",
+        dark="lightgray",
+    ))
+    baseDisabledBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="lightgray",
+        dark="dimgray",
+    ))
     disabledFontColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="lightgray",
         dark="rgb(89, 94, 99)",
@@ -25,7 +34,19 @@ class Preset:
         light="rgb(240, 240, 240)",
         dark="rgb(49, 54, 59)",
     ))
-    disabledCheckBoxBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
+    checkboxImageFile: PresetValue = field(default_factory=lambda: PresetValue(
+        light="checked.png",
+        dark="dark-checked.png",
+    ))
+    checkboxDisabledImageFile: PresetValue = field(default_factory=lambda: PresetValue(
+        light="checked-disabled.png",
+        dark="dark-checked-disabled.png",
+    ))
+    checkboxBackgroundColor: PresetValue = field(default_factory=lambda: PresetValue(
+        light="white",
+        dark="rgb(85, 90, 95)",
+    ))
+    checkboxDisabledBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(250, 250, 250)",
         dark="rgb(75, 80, 85)",
     ))
@@ -155,7 +176,7 @@ class Preset:
     ))
     comboboxBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="darkgray",
-        dark="darkgray",
+        dark="gray",
     ))
     comboboxSelectionBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="lightskyblue",
@@ -163,7 +184,7 @@ class Preset:
     ))
     groupboxBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="darkgray",
-        dark="lightgray",
+        dark="gray",
     ))
     groupboxBorderDisabledColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="lightgray",
@@ -183,11 +204,11 @@ class Preset:
     ))
     tabwidgetBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="darkgray",
-        dark="darkgray",
+        dark="gray",
     ))
     tabBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="darkgray",
-        dark="darkgray",
+        dark="gray",
     ))
     tabBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(220, 220, 220)",
@@ -203,7 +224,7 @@ class Preset:
     ))
     statusbarBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="darkgray",
-        dark="darkgray",
+        dark="gray",
     ))
     scrollbarBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="transparent",
