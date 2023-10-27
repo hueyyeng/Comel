@@ -17,17 +17,18 @@ class Preset:
         light="rgb(240, 240, 240)",
         dark="rgb(49, 54, 59)",
     ))
+    # TODO: Check on QComboBox and QTableView border color?
     # TODO: Replace all specific widgets border/bg color
     baseBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="gray",
-        dark="lightgray",
+        light="rgb(184, 184, 184)",
+        dark="rgb(128, 128, 128)",
     ))
     baseDisabledBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="lightgray",
-        dark="dimgray",
+        light="rgb(211, 211, 211)",
+        dark="rgb(80, 80, 80)",
     ))
     disabledFontColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="lightgray",
+        light="rgb(211, 211, 211)",
         dark="rgb(89, 94, 99)",
     ))
     disabledBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
@@ -66,10 +67,6 @@ class Preset:
         light="rgb(190, 200, 205)",
         dark="rgb(200, 210, 215)",
     ))
-    tableHeaderBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="darkgray",
-        dark="rgb(50, 50, 50)",
-    ))
     tableHeaderGradientStartColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(235, 235, 235)",
         dark="rgb(105, 115, 125)",
@@ -106,10 +103,6 @@ class Preset:
         light="#555555",
         dark="#555555",
     ))
-    menubarBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="lightgray",
-        dark="darkgray",
-    ))
     menuItemBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(240, 240, 240)",
         dark="rgb(49, 54, 59)",
@@ -122,10 +115,6 @@ class Preset:
         light="dodgerblue",
         dark="lightsteelblue",
     ))
-    menuBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="lightgray",
-        dark="darkgray",
-    ))
     sectionBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(250, 250, 250)",
         dark="#474f56",
@@ -133,10 +122,6 @@ class Preset:
     viewBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="white",
         dark="rgb(85, 90, 95)",
-    ))
-    buttonBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="darkgray",
-        dark="gray",
     ))
     defaultButtonBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(79, 139, 200)",
@@ -162,10 +147,6 @@ class Preset:
         light="white",
         dark="rgb(85, 90, 95)",
     ))
-    progressbarBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="darkgray",
-        dark="darkgray",
-    ))
     progressbarChunkBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(182, 227, 255)",
         dark="rgb(25, 63, 140)",
@@ -174,21 +155,9 @@ class Preset:
         light="white",
         dark="rgb(85, 90, 95)",
     ))
-    comboboxBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="darkgray",
-        dark="gray",
-    ))
     comboboxSelectionBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="lightskyblue",
         dark="dodgerblue",
-    ))
-    groupboxBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="darkgray",
-        dark="gray",
-    ))
-    groupboxBorderDisabledColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="lightgray",
-        dark="rgb(89, 94, 99)",
     ))
     spinboxBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="white",
@@ -197,18 +166,6 @@ class Preset:
     textInputBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="white",
         dark="rgb(85, 90, 95)",
-    ))
-    textInputBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="darkgray",
-        dark="gray",
-    ))
-    tabwidgetBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="darkgray",
-        dark="gray",
-    ))
-    tabBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="darkgray",
-        dark="gray",
     ))
     tabBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(220, 220, 220)",
@@ -221,10 +178,6 @@ class Preset:
     tabSelectedBackgroundGradientEndColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(224, 224, 224)",
         dark="rgb(105, 115, 125)",
-    ))
-    statusbarBorderColor: PresetValue = field(default_factory=lambda:PresetValue(
-        light="darkgray",
-        dark="gray",
     ))
     scrollbarBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="transparent",

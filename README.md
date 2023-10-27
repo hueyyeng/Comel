@@ -16,7 +16,7 @@ Yes it is!
 
 ## Getting Started
 
-Last tested with **Python 3.8.10** but any Python version that PySide6 supports. Highly recommend using virtual
+Last tested with **Python 3.10+** but any Python version that PySide6 supports. Highly recommend using virtual
 environment when testing/implementing this.
 
 ### Install using pip

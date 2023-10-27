@@ -9,11 +9,12 @@
 
 QWidget {
   background-color: ${baseBackgroundColor};
+  border-color: ${baseBorderColor};
 }
 
 QWidget:disabled {
   color: ${disabledFontColor};
-  border-color: ${disabledFontColor};
+  border-color: ${baseDisabledBorderColor};
 }
 
 QToolTip {
@@ -22,7 +23,7 @@ QToolTip {
 }
 
 QMenuBar {
-  border-bottom: 1px solid ${menubarBorderColor};
+  border-bottom: 1px solid ${baseBorderColor};
 }
 
 QMenuBar::item {
@@ -39,7 +40,7 @@ QMenu::item:selected, QMenuBar::item:selected {
 }
 
 QMenu {
-  border: 1px solid ${menuBorderColor};
+  border: 1px solid ${baseBorderColor};
 }
 
 ::section {
@@ -59,7 +60,7 @@ QListView:disabled, QTableView:disabled, QTreeView:disabled {
 }
 
 QHeaderView::section {
-  border: 1px solid ${tableHeaderBorderColor};
+  border: 1px solid ${baseBorderColor};
   border-top: none;
   border-left: none;
   padding-left: 4px;
@@ -71,7 +72,7 @@ QHeaderView::section {
 }
 
 QHeaderView::section:disabled {
-  border: 1px solid ${tableHeaderBorderColor};
+  border: 1px solid ${baseDisabledBorderColor};
   border-top: none;
   border-left: none;
   padding-left: 4px;
@@ -92,7 +93,7 @@ QHeaderView::section:pressed {
 }
 
 QPushButton {
-  border: 1px solid ${buttonBorderColor};
+  border: 1px solid ${baseBorderColor};
   padding: 4px;
 }
 
@@ -105,7 +106,7 @@ QPushButton:default {
 QPushButton:default:disabled {
   background-color: ${defaultButtonDisabledBackgroundColor};
   color: ${defaultButtonDisabledFontColor};
-  border: 1px solid ${disabledFontColor};
+  border: 1px solid ${baseDisabledBorderColor};
 }
 
 QPushButton:default:hover {
@@ -122,7 +123,7 @@ QPushButton:pressed {
 
 QProgressBar {
   background-color: ${progressbarBackgroundColor};
-  border: 1px solid ${progressbarBorderColor};
+  border: 1px solid ${baseBorderColor};
   text-align: center;
 }
 
@@ -162,24 +163,24 @@ QCheckBox::indicator::unchecked:disabled {
 
 QComboBox {
   background-color: ${comboboxBackgroundColor};
-  border: 1px solid ${comboboxBorderColor};
+  border: 1px solid ${baseBorderColor};
   padding: 3px;
   selection-background-color: ${comboboxSelectionBackgroundColor};
 }
 
 QComboBox:disabled {
   background-color: ${disabledBackgroundColor};
-  border: 1px solid ${disabledFontColor};
+  border: 1px solid ${baseDisabledBorderColor};
 }
 
 QGroupBox {
-  border: 1px solid ${groupboxBorderColor};
+  border: 1px solid ${baseBorderColor};
   margin-top: 7px;
   padding-top: 7px;
 }
 
 QGroupBox:disabled {
-  border: 1px solid ${groupboxBorderDisabledColor};
+  border: 1px solid ${baseDisabledBorderColor};
 }
 
 QGroupBox::title {
@@ -195,21 +196,21 @@ QSpinBox {
 
 QPlainTextEdit, QTextEdit, QLineEdit {
   background-color: ${textInputBackgroundColor};
-  border: 1px solid ${textInputBorderColor};
+  border: 1px solid ${baseBorderColor};
 }
 
 QPlainTextEdit:disabled, QTextEdit:disabled, QLineEdit:disabled {
   background-color: ${disabledBackgroundColor};
-  border: 1px solid ${disabledFontColor};
+  border: 1px solid ${baseDisabledBorderColor};
 }
 
 QTabWidget::pane {
-  border: 1px solid ${tabwidgetBorderColor};
+  border: 1px solid ${baseBorderColor};
 }
 
 QTabBar::tab {
   background-color: ${tabBackgroundColor};
-  border: 1px solid ${tabBorderColor};
+  border: 1px solid ${baseBorderColor};
   border-bottom: none;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -238,7 +239,7 @@ QTabBar::tab:!selected {
 }
 
 QStatusBar {
-  border-top: 1px solid ${statusbarBorderColor};
+  border-top: 1px solid ${baseBorderColor};
   min-height: 24px;
 }
 
