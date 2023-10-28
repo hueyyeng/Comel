@@ -35,6 +35,22 @@ class Preset:
         light="rgb(240, 240, 240)",
         dark="rgb(49, 54, 59)",
     ))
+    radioBtnOnImageFile: PresetValue = field(default_factory=lambda: PresetValue(
+        light="radio-on.png",
+        dark="dark-radio-on.png",
+    ))
+    radioBtnOffImageFile: PresetValue = field(default_factory=lambda: PresetValue(
+        light="radio-off.png",
+        dark="dark-radio-off.png",
+    ))
+    radioBtnOnDisabledImageFile: PresetValue = field(default_factory=lambda: PresetValue(
+        light="dark-radio-on.png",
+        dark="radio-on.png",
+    ))
+    radioBtnOffDisabledImageFile: PresetValue = field(default_factory=lambda: PresetValue(
+        light="dark-radio-off.png",
+        dark="radio-off.png",
+    ))
     checkboxImageFile: PresetValue = field(default_factory=lambda: PresetValue(
         light="checked.png",
         dark="dark-checked.png",

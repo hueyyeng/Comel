@@ -142,6 +142,22 @@ QProgressBar::chunk {
   width: 10px;
 }
 
+QRadioButton::indicator::checked {
+  image: url(cicons:${radioBtnOnImageFile});
+}
+
+QRadioButton::indicator::unchecked {
+  image: url(cicons:${radioBtnOffImageFile});
+}
+
+QRadioButton::indicator::checked:disabled {
+  image: url(cicons:${radioBtnOnDisabledImageFile});
+}
+
+QRadioButton::indicator::unchecked:disabled {
+  image: url(cicons:${radioBtnOffDisabledImageFile});
+}
+
 QCheckBox::indicator:disabled {
   background-color: ${checkboxDisabledBackgroundColor};
 }

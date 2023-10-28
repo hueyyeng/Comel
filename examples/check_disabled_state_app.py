@@ -5,7 +5,7 @@ from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 from PySide6.QtWidgets import QSizePolicy as QSP
 
-from comel.widgets import CCheckBox
+from comel.widgets import CCheckBox, CRadioButton
 from comel.wrapper import ComelMainWindowWrapper
 
 
@@ -24,7 +24,6 @@ class VerticalGroupBox(QGroupBox):
 
     def addWidget(self, w: QWidget):
         self.layout().addWidget(w)
-
 
     def addStretch(self):
         self.layout().addStretch()
@@ -56,6 +55,12 @@ class GreatestHitGroupBox(VerticalGroupBox):
         self.checked_checkbox = CCheckBox("Checked")
         self.checked_checkbox.setChecked(True)
         self.addWidget(self.checked_checkbox)
+
+        self.radio1_btn = CRadioButton("Guerilla Radio")
+        self.radio1_btn.setChecked(True)
+        self.radio2_btn = CRadioButton("Head Radio")
+        self.addWidget(self.radio1_btn)
+        self.addWidget(self.radio2_btn)
 
         self.lineedit = QLineEdit()
         self.lineedit.setPlaceholderText("Lineedit")

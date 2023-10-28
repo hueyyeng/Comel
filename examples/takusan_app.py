@@ -4,7 +4,7 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-from comel.widgets import CCheckBox
+from comel.widgets import CCheckBox, CRadioButton
 from comel.wrapper import ComelMainWindowWrapper
 
 
@@ -62,10 +62,10 @@ class TakusanApp(ComelMainWindowWrapper):
         )
         options_layout.addWidget(combobox)
 
-        bt1_radiobtn = QRadioButton("Radio 1")
+        bt1_radiobtn = CRadioButton("Radio 1")
         bt1_radiobtn.setChecked(True)
         options_layout.addWidget(bt1_radiobtn)
-        bt2_radiobtn = QRadioButton("Radio 2")
+        bt2_radiobtn = CRadioButton("Radio 2")
         options_layout.addWidget(bt2_radiobtn)
 
         # QProgressBar
