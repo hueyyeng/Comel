@@ -11,12 +11,11 @@ Yes it is!
 
 1. Custom QMainWindow widget with built-in light/dark mode toggler. Connect the `toggle_theme` function to QtWidgets
    callback function and you're done.
-2. No icons handling! ~~I'm actually lazy~~ I decided that icons should be the responsibility of the developer.
-3. Very simple package (for now). Not bloated from trying to cater various Qt for Python packages.
+2. Very simple package (for now). Not bloated from trying to cater various Qt for Python packages.
 
 ## Getting Started
 
-Last tested with **Python 3.8.10** but any Python version that PySide6 supports. Highly recommend using virtual
+Last tested with **Python 3.10+** but any Python version that PySide6 supports. Highly recommend using virtual
 environment when testing/implementing this.
 
 ### Install using pip
@@ -36,6 +35,12 @@ Import `ComelMainWindowWrapper` class and connect `toggle_theme` to a widget act
 
 Refer to examples directory for `barebone_app.py` for boilerplate code or `takusan_app.py` for a typical PySide app
 written from scratch without using Qt Designer.
+
+### Custom Widgets
+
+There is **CCheckBox** and **CRadioButton** which uses custom icons and size override. Using the regular **QCheckBox**
+and
+**QRadioButton** will result in bigger than usual size as it displays the 32x32 size icon image.
 
 ## Examples
 
@@ -65,6 +70,8 @@ python examples/check_disabled_state_app.py
    for the affected widgets in future updates.
 2. This library does not cover every single widget styles. Create an issue if you encounter a widget that is missing
    either light or dark styling.
+3. **QMdiArea** and **QMdiSubWindow** is missing the window resize handle after applying Comel stylesheets. Suspecting
+   one of the selector override to be the root cause.
 
 ## Why Comel?
 

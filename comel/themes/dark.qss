@@ -9,11 +9,12 @@
 
 QWidget {
   background-color: rgb(49, 54, 59);
+  border-color: rgb(128, 128, 128);
 }
 
 QWidget:disabled {
   color: rgb(89, 94, 99);
-  border-color: rgb(89, 94, 99);
+  border-color: rgb(80, 80, 80);
 }
 
 QToolTip {
@@ -22,7 +23,7 @@ QToolTip {
 }
 
 QMenuBar {
-  border-bottom: 1px solid darkgray;
+  border-bottom: 1px solid rgb(128, 128, 128);
 }
 
 QMenuBar::item {
@@ -39,7 +40,7 @@ QMenu::item:selected, QMenuBar::item:selected {
 }
 
 QMenu {
-  border: 1px solid darkgray;
+  border: 1px solid rgb(128, 128, 128);
 }
 
 ::section {
@@ -58,8 +59,18 @@ QListView:disabled, QTableView:disabled, QTreeView:disabled {
   selection-background-color: rgb(130, 140, 145);
 }
 
+QTableView
+{
+  gridline-color: rgb(128, 128, 128);
+}
+
+QTableView:disabled
+{
+  gridline-color: rgb(80, 80, 80);
+}
+
 QHeaderView::section {
-  border: 1px solid rgb(50, 50, 50);
+  border: 1px solid rgb(128, 128, 128);
   border-top: none;
   border-left: none;
   padding-left: 4px;
@@ -71,7 +82,7 @@ QHeaderView::section {
 }
 
 QHeaderView::section:disabled {
-  border: 1px solid rgb(50, 50, 50);
+  border: 1px solid rgb(80, 80, 80);
   border-top: none;
   border-left: none;
   padding-left: 4px;
@@ -92,7 +103,7 @@ QHeaderView::section:pressed {
 }
 
 QPushButton {
-  border: 1px solid gray;
+  border: 1px solid rgb(128, 128, 128);
   padding: 4px;
 }
 
@@ -105,7 +116,7 @@ QPushButton:default {
 QPushButton:default:disabled {
   background-color: rgb(77, 99, 121);
   color: rgb(150, 150, 150);
-  border: 1px solid rgb(89, 94, 99);
+  border: 1px solid rgb(80, 80, 80);
 }
 
 QPushButton:default:hover {
@@ -122,7 +133,7 @@ QPushButton:pressed {
 
 QProgressBar {
   background-color: rgb(85, 90, 95);
-  border: 1px solid darkgray;
+  border: 1px solid rgb(128, 128, 128);
   text-align: center;
 }
 
@@ -131,30 +142,71 @@ QProgressBar::chunk {
   width: 10px;
 }
 
+QRadioButton::indicator::checked {
+  image: url(cicons:dark-radio-on.png);
+}
+
+QRadioButton::indicator::unchecked {
+  image: url(cicons:dark-radio-off.png);
+}
+
+QRadioButton::indicator::checked:disabled {
+  image: url(cicons:radio-on.png);
+}
+
+QRadioButton::indicator::unchecked:disabled {
+  image: url(cicons:radio-off.png);
+}
+
 QCheckBox::indicator:disabled {
   background-color: rgb(75, 80, 85);
 }
 
+QCheckBox::indicator::checked {
+  image: url(cicons:dark-checked.png);
+  background-color: rgb(85, 90, 95);
+  border: 1px solid rgb(128, 128, 128);
+  padding: 2px;
+}
+
+QCheckBox::indicator::checked:disabled {
+  image: url(cicons:dark-checked-disabled.png);
+  background-color: rgb(75, 80, 85);
+  border: 1px solid rgb(80, 80, 80);
+}
+
+QCheckBox::indicator::unchecked {
+  background-color: rgb(85, 90, 95);
+  border: 1px solid rgb(128, 128, 128);
+  padding: 2px;
+}
+
+QCheckBox::indicator::unchecked:disabled {
+  background-color: rgb(75, 80, 85);
+  border: 1px solid rgb(80, 80, 80);
+  padding: 2px;
+}  
+
 QComboBox {
   background-color: rgb(85, 90, 95);
-  border: 1px solid darkgray;
+  border: 1px solid rgb(128, 128, 128);
   padding: 3px;
   selection-background-color: dodgerblue;
 }
 
 QComboBox:disabled {
   background-color: rgb(49, 54, 59);
-  border: 1px solid rgb(89, 94, 99);
+  border: 1px solid rgb(80, 80, 80);
 }
 
 QGroupBox {
-  border: 1px solid lightgray;
+  border: 1px solid rgb(128, 128, 128);
   margin-top: 7px;
   padding-top: 7px;
 }
 
 QGroupBox:disabled {
-  border: 1px solid rgb(89, 94, 99);
+  border: 1px solid rgb(80, 80, 80);
 }
 
 QGroupBox::title {
@@ -165,26 +217,30 @@ QGroupBox::title {
 
 QSpinBox {
   background-color: rgb(85, 90, 95);
-  border-width: 4;
+  border: 1px solid rgb(128, 128, 128);
+}
+
+QSpinBox:disabled {
+  border: 1px solid rgb(80, 80, 80);
 }
 
 QPlainTextEdit, QTextEdit, QLineEdit {
   background-color: rgb(85, 90, 95);
-  border: 1px solid gray;
+  border: 1px solid rgb(128, 128, 128);
 }
 
 QPlainTextEdit:disabled, QTextEdit:disabled, QLineEdit:disabled {
   background-color: rgb(49, 54, 59);
-  border: 1px solid rgb(89, 94, 99);
+  border: 1px solid rgb(80, 80, 80);
 }
 
 QTabWidget::pane {
-  border: 1px solid darkgray;
+  border: 1px solid rgb(128, 128, 128);
 }
 
 QTabBar::tab {
   background-color: rgb(58, 63, 68);
-  border: 1px solid darkgray;
+  border: 1px solid rgb(128, 128, 128);
   border-bottom: none;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -213,7 +269,7 @@ QTabBar::tab:!selected {
 }
 
 QStatusBar {
-  border-top: 1px solid darkgray;
+  border-top: 1px solid rgb(128, 128, 128);
   min-height: 24px;
 }
 
