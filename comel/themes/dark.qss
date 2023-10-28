@@ -59,6 +59,16 @@ QListView:disabled, QTableView:disabled, QTreeView:disabled {
   selection-background-color: rgb(130, 140, 145);
 }
 
+QTableView
+{
+  gridline-color: rgb(128, 128, 128);
+}
+
+QTableView:disabled
+{
+  gridline-color: rgb(80, 80, 80);
+}
+
 QHeaderView::section {
   border: 1px solid rgb(128, 128, 128);
   border-top: none;
@@ -170,7 +180,7 @@ QComboBox {
 
 QComboBox:disabled {
   background-color: rgb(49, 54, 59);
-  border: 1px solid rgb(89, 94, 99);
+  border: 1px solid rgb(80, 80, 80);
 }
 
 QGroupBox {
@@ -191,7 +201,11 @@ QGroupBox::title {
 
 QSpinBox {
   background-color: rgb(85, 90, 95);
-  border-width: 4;
+  border: 1px solid rgb(128, 128, 128);
+}
+
+QSpinBox:disabled {
+  border: 1px solid rgb(80, 80, 80);
 }
 
 QPlainTextEdit, QTextEdit, QLineEdit {
@@ -201,7 +215,7 @@ QPlainTextEdit, QTextEdit, QLineEdit {
 
 QPlainTextEdit:disabled, QTextEdit:disabled, QLineEdit:disabled {
   background-color: rgb(49, 54, 59);
-  border: 1px solid rgb(89, 94, 99);
+  border: 1px solid rgb(80, 80, 80);
 }
 
 QTabWidget::pane {

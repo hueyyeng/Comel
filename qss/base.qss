@@ -59,6 +59,16 @@ QListView:disabled, QTableView:disabled, QTreeView:disabled {
   selection-background-color: ${viewSelectionDisabledBackgroundColor};
 }
 
+QTableView
+{
+  gridline-color: ${baseBorderColor};
+}
+
+QTableView:disabled
+{
+  gridline-color: ${baseDisabledBorderColor};
+}
+
 QHeaderView::section {
   border: 1px solid ${baseBorderColor};
   border-top: none;
@@ -191,7 +201,11 @@ QGroupBox::title {
 
 QSpinBox {
   background-color: ${spinboxBackgroundColor};
-  border-width: 4;
+  border: 1px solid ${baseBorderColor};
+}
+
+QSpinBox:disabled {
+  border: 1px solid ${baseDisabledBorderColor};
 }
 
 QPlainTextEdit, QTextEdit, QLineEdit {
