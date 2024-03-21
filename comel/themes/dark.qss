@@ -22,6 +22,10 @@ QToolTip {
   color: #555555;
 }
 
+QToolButton::hover {
+  background-color: rgb(130, 140, 145);
+}
+
 QMenuBar {
   border-bottom: 1px solid rgb(128, 128, 128);
 }
@@ -215,6 +219,14 @@ QGroupBox::title {
   padding: 0 3px 0 3px;
 }
 
+QSplitter::handle:horizontal {
+  border: 1px outset rgb(80, 80, 80);
+}
+
+QSplitter::handle:vertical {
+  border: 1px outset rgb(80, 80, 80);
+}
+
 QSpinBox {
   background-color: rgb(85, 90, 95);
   border: 1px solid rgb(128, 128, 128);
@@ -241,11 +253,32 @@ QTabWidget::pane {
 QTabBar::tab {
   background-color: rgb(58, 63, 68);
   border: 1px solid rgb(128, 128, 128);
-  border-bottom: none;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  min-width: 14ex;
+}
+
+QTabBar::tab:top, QTabBar::tab:bottom {
+  min-width: 20ex;
   padding: 4px;
+}
+
+QTabBar::tab:left, QTabBar::tab:right {
+  min-height: 20ex;
+  padding: 4px;
+}
+
+QTabBar::tab:top {
+  border-bottom: 0;
+}
+
+QTabBar::tab:bottom {
+  border-top: 0;
+}
+
+QTabBar::tab:right {
+  border-left: 0;
+}
+
+QTabBar::tab:left {
+  border-right: 0;
 }
 
 QTabBar::tab:hover {
@@ -265,7 +298,7 @@ QTabBar::tab:selected {
 }
 
 QTabBar::tab:!selected {
-  margin-top: 2px;
+  margin-top: 0px;
 }
 
 QStatusBar {

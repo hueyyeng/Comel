@@ -66,6 +66,9 @@ class GreatestHitGroupBox(VerticalGroupBox):
         self.lineedit.setPlaceholderText("Lineedit")
         self.addWidget(self.lineedit)
 
+        self.toolbtn = QToolButton()
+        self.addWidget(self.toolbtn)
+
         self.combobox = QComboBox()
         self.combobox.addItems(
             [
