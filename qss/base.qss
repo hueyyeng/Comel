@@ -63,13 +63,35 @@ QListView:disabled, QTableView:disabled, QTreeView:disabled {
   selection-background-color: ${viewSelectionDisabledBackgroundColor};
 }
 
-QTableView
-{
+QTreeView::branch:has-siblings:!adjoins-item {
+  border-image: url(cicons:${vlineImageFile}) 0;
+}
+
+QTreeView::branch:has-siblings:adjoins-item {
+  border-image: url(cicons:${branchMoreImageFile}) 0;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+  border-image: url(cicons:${branchEndImageFile}) 0;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+  border-image: none;
+  image: url(cicons:${branchClosedImageFile});
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  {
+  border-image: none;
+  image: url(cicons:${branchOpenImageFile});
+}
+
+QTableView {
   gridline-color: ${baseBorderColor};
 }
 
-QTableView:disabled
-{
+QTableView:disabled {
   gridline-color: ${baseDisabledBorderColor};
 }
 
@@ -196,6 +218,14 @@ QComboBox {
   border: 1px solid ${baseBorderColor};
   padding: 3px;
   selection-background-color: ${comboboxSelectionBackgroundColor};
+}
+
+QComboBox QAbstractItemView::item:alternate {
+  background-color: ${comboboxAltBackgroundColor};
+}
+
+QComboBox QAbstractItemView::item:alternate:hover {
+  background-color: ${comboboxAltHoverBackgroundColor};
 }
 
 QComboBox:disabled {

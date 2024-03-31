@@ -63,13 +63,35 @@ QListView:disabled, QTableView:disabled, QTreeView:disabled {
   selection-background-color: rgb(230, 239, 253);
 }
 
-QTableView
-{
+QTreeView::branch:has-siblings:!adjoins-item {
+  border-image: url(cicons:vline.png) 0;
+}
+
+QTreeView::branch:has-siblings:adjoins-item {
+  border-image: url(cicons:branch-more.png) 0;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+  border-image: url(cicons:branch-end.png) 0;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+  border-image: none;
+  image: url(cicons:branch-closed.png);
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  {
+  border-image: none;
+  image: url(cicons:branch-open.png);
+}
+
+QTableView {
   gridline-color: rgb(184, 184, 184);
 }
 
-QTableView:disabled
-{
+QTableView:disabled {
   gridline-color: rgb(211, 211, 211);
 }
 
@@ -196,6 +218,14 @@ QComboBox {
   border: 1px solid rgb(184, 184, 184);
   padding: 3px;
   selection-background-color: lightskyblue;
+}
+
+QComboBox QAbstractItemView::item:alternate {
+  background-color: rgb(220, 220, 220);
+}
+
+QComboBox QAbstractItemView::item:alternate:hover {
+  background-color: rgb(204, 232, 255);
 }
 
 QComboBox:disabled {

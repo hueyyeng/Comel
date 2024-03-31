@@ -35,6 +35,26 @@ class Preset:
         light="rgb(240, 240, 240)",
         dark="rgb(49, 54, 59)",
     ))
+    branchClosedImageFile: PresetValue = field(default_factory=lambda: PresetValue(
+        light="branch-closed.png",
+        dark="dark-branch-closed.png",
+    ))
+    branchEndImageFile: PresetValue = field(default_factory=lambda: PresetValue(
+        light="branch-end.png",
+        dark="dark-branch-end.png",
+    ))
+    branchMoreImageFile: PresetValue = field(default_factory=lambda: PresetValue(
+        light="branch-more.png",
+        dark="dark-branch-more.png",
+    ))
+    branchOpenImageFile: PresetValue = field(default_factory=lambda: PresetValue(
+        light="branch-open.png",
+        dark="dark-branch-open.png",
+    ))
+    vlineImageFile: PresetValue = field(default_factory=lambda: PresetValue(
+        light="vline.png",
+        dark="dark-vline.png",
+    ))
     radioBtnOnImageFile: PresetValue = field(default_factory=lambda: PresetValue(
         light="radio-on.png",
         dark="dark-radio-on.png",
@@ -170,6 +190,15 @@ class Preset:
     comboboxBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="white",
         dark="rgb(85, 90, 95)",
+    ))
+    comboboxAltBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(220, 220, 220)",
+        dark="rgb(105, 110, 115)",
+    ))
+    # TODO: Not ideal as currently hardcoded...
+    comboboxAltHoverBackgroundColor: PresetValue = field(default_factory=lambda: PresetValue(
+        light="rgb(204, 232, 255)",
+        dark="rgb(68, 100, 127)",
     ))
     comboboxSelectionBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="lightskyblue",

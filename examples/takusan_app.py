@@ -62,6 +62,34 @@ class TakusanApp(ComelMainWindowWrapper):
         )
         options_layout.addWidget(combobox)
 
+        combobox2 = QComboBox()
+        combobox2.view().setAlternatingRowColors(True)
+        combobox2.addItems(
+            [
+                "日曜日",
+                "月曜日",
+                "火曜日",
+                "水曜日",
+                "木曜日",
+                "金曜日",
+                "同曜日",
+            ]
+        )
+        options_layout.addWidget(combobox2)
+
+        combobox3 = QComboBox()
+        combobox3.setEnabled(False)
+        combobox2.view().setAlternatingRowColors(True)
+        combobox3.addItems(
+            [
+                "Disabled",
+                "Nein",
+                "None",
+                "Oh No",
+            ]
+        )
+        options_layout.addWidget(combobox3)
+
         bt1_radiobtn = CRadioButton("Radio 1")
         bt1_radiobtn.setChecked(True)
         options_layout.addWidget(bt1_radiobtn)
@@ -136,6 +164,28 @@ class TakusanApp(ComelMainWindowWrapper):
             ]
         )
         tab2_layout.addWidget(list_widget)
+
+        tab3 = QWidget()
+        tab_widget.addTab(tab3, "Tab 3")
+        tab3_layout = QVBoxLayout()
+        tab3.setLayout(tab3_layout)
+        tree_widget = QTreeWidget()
+        tree_widget.setHeaderLabels(["Variables"])
+        twi_foo = QTreeWidgetItem()
+        twi_foo.setText(0, "Foo")
+        twi_bar = QTreeWidgetItem()
+        twi_bar.setText(0, "Bar")
+        twi_spam = QTreeWidgetItem()
+        twi_spam.setText(0, "Spam")
+        twi_egg = QTreeWidgetItem()
+        twi_egg.setText(0, "Egg")
+
+        twi_foo.addChild(twi_bar)
+        twi_foo.addChild(twi_spam)
+
+        tree_widget.addTopLevelItem(twi_foo)
+        tree_widget.addTopLevelItem(twi_egg)
+        tab3_layout.addWidget(tree_widget)
 
     def setup_ui_menu_bar(self):
         self.menu_bar = QMenuBar()
