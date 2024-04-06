@@ -155,6 +155,10 @@ class Preset:
         light="rgb(250, 250, 250)",
         dark="#474f56",
     ))
+    calendarHeaderBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(235, 235, 240)",
+        dark="rgb(65, 70, 80)",
+    ))
     viewBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="white",
         dark="rgb(85, 90, 95)",

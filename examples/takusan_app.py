@@ -118,6 +118,14 @@ class TakusanApp(ComelMainWindowWrapper):
         textedit = QTextEdit()
         input_layout.addRow("QTextEdit:", textedit)
 
+        dateedit = QDateEdit(self)
+        dateedit.setCalendarPopup(True)
+        input_layout.addRow("QDateEdit:", dateedit)
+
+        cal_widget = QCalendarWidget(self)
+        cal_widget.setVerticalHeaderFormat(QCalendarWidget.VerticalHeaderFormat.NoVerticalHeader)
+        input_layout.addRow("QCalendarWidget:", cal_widget)
+
         # QGroupBox
         groupbox = QGroupBox("GroupBox")
         side_layout.addWidget(groupbox)

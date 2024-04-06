@@ -389,3 +389,17 @@ QScrollBar::add-page, QScrollBar::sub-page {
 QAbstractScrollArea::corner {
   background: transparent;
 }
+
+QDateEdit {
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgb(85, 90, 95);
+}
+
+QCalendarWidget QWidget {
+  alternate-background-color: rgb(65, 70, 80);
+}
+
+QCalendarWidget QAbstractItemView:disabled {
+  color: rgb(128, 128, 128);
+}
