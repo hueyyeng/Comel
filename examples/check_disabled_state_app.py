@@ -114,6 +114,7 @@ class GreatestHitGroupBox(VerticalGroupBox):
         self.addWidget(self.listview)
 
         self.treeview = QTreeView()
+        self.treeview.setAlternatingRowColors(True)
         self.treeview.setModel(self.model)
         self.addWidget(self.treeview)
 

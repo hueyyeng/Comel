@@ -53,6 +53,7 @@ QMenu {
 
 QListView, QTableView, QTreeView {
   background-color: ${viewBackgroundColor};
+  alternate-background-color: ${viewAlternateBackgroundColor};
   selection-color: ${baseFontColor};
   selection-background-color: ${viewSelectionBackgroundColor};
 }
@@ -250,11 +251,13 @@ QGroupBox::title {
 }
 
 QSplitter::handle:horizontal {
-  border: 1px outset ${baseDisabledBorderColor};
+  image: url(cicons:splitter-horz.png);
+  background-image: url(cicons:splitter-horz-bg.png);
 }
 
 QSplitter::handle:vertical {
-  border: 1px outset ${baseDisabledBorderColor};
+  image: url(cicons:splitter-vert.png);
+  background-image: url(cicons:splitter-vert-bg.png);
 }
 
 QSpinBox {

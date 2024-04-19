@@ -163,6 +163,10 @@ class Preset:
         light="white",
         dark="rgb(85, 90, 95)",
     ))
+    viewAlternateBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="rgb(245, 245, 245)",
+        dark="rgb(65, 70, 75)",
+    ))
     defaultButtonBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="rgb(79, 139, 200)",
         dark="rgb(79, 139, 200)",
