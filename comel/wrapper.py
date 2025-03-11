@@ -2,8 +2,12 @@ import os
 from pathlib import Path
 
 import darkdetect
-from PySide6.QtCore import QDir
-from PySide6.QtWidgets import QMainWindow
+try:
+    from qtpy.QtCore import QDir
+    from qtpy.QtWidgets import QMainWindow
+except ImportError:
+    from PySide6.QtCore import QDir
+    from PySide6.QtWidgets import QMainWindow
 
 PACKAGE_ROOT = Path(os.path.dirname(os.path.dirname(__file__)))
 LIGHT_THEME = PACKAGE_ROOT / "comel/themes/light.qss"

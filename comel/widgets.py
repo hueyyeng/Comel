@@ -1,4 +1,7 @@
-from PySide6.QtWidgets import QCheckBox, QRadioButton
+try:
+    from qtpy.QtWidgets import QCheckBox, QRadioButton
+except ImportError:
+    from PySide6.QtWidgets import QCheckBox, QRadioButton
 
 
 class CCheckBox(QCheckBox):
