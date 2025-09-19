@@ -17,10 +17,11 @@ DARK_THEME = PACKAGE_ROOT / "comel/themes/dark.qss"
 
 class ComelMainWindowWrapper(QMainWindow):
     def __init__(self, *args, **kwargs):
+        _is_light = kwargs.pop("is_light", darkdetect.isLight())
         super().__init__(*args, **kwargs)
         self.root = os.path.dirname(os.path.abspath(__file__))
         self.set_icons_search_path()
-        self.is_light = darkdetect.isLight()
+        self.is_light = bool(_is_light)
         self.apply_stylesheet()
 
     def set_icons_search_path(self):
@@ -30,6 +31,14 @@ class ComelMainWindowWrapper(QMainWindow):
             "cicons",
             os.path.join(self.root, "icons")
         )
+
+    def set_light_theme(self):
+        self.is_light = True
+        self.apply_stylesheet()
+
+    def set_dark_theme(self):
+        self.is_light = False
+        self.apply_stylesheet()
 
     def toggle_theme(self):
         self.is_light = not self.is_light
@@ -44,10 +53,11 @@ class ComelMainWindowWrapper(QMainWindow):
 
 class ComelDialogWrapper(QDialog):
     def __init__(self, *args, **kwargs):
+        _is_light = kwargs.pop("is_light", darkdetect.isLight())
         super().__init__(*args, **kwargs)
         self.root = os.path.dirname(os.path.abspath(__file__))
         self.set_icons_search_path()
-        self.is_light = darkdetect.isLight()
+        self.is_light = bool(_is_light)
         self.apply_stylesheet()
 
     def set_icons_search_path(self):
@@ -57,6 +67,14 @@ class ComelDialogWrapper(QDialog):
             "cicons",
             os.path.join(self.root, "icons")
         )
+
+    def set_light_theme(self):
+        self.is_light = True
+        self.apply_stylesheet()
+
+    def set_dark_theme(self):
+        self.is_light = False
+        self.apply_stylesheet()
 
     def toggle_theme(self):
         self.is_light = not self.is_light
@@ -71,10 +89,11 @@ class ComelDialogWrapper(QDialog):
 
 class ComelWidgetWrapper(QWidget):
     def __init__(self, *args, **kwargs):
+        _is_light = kwargs.pop("is_light", darkdetect.isLight())
         super().__init__(*args, **kwargs)
         self.root = os.path.dirname(os.path.abspath(__file__))
         self.set_icons_search_path()
-        self.is_light = darkdetect.isLight()
+        self.is_light = bool(_is_light)
         self.apply_stylesheet()
 
     def set_icons_search_path(self):
@@ -84,6 +103,14 @@ class ComelWidgetWrapper(QWidget):
             "cicons",
             os.path.join(self.root, "icons")
         )
+
+    def set_light_theme(self):
+        self.is_light = True
+        self.apply_stylesheet()
+
+    def set_dark_theme(self):
+        self.is_light = False
+        self.apply_stylesheet()
 
     def toggle_theme(self):
         self.is_light = not self.is_light
