@@ -109,16 +109,16 @@ class GreatestHitGroupBox(VerticalGroupBox):
         self.model.setItem(2, 1, QStandardItem("Strawberry"))
         self.model.setItem(3, 1, QStandardItem("A very long name for an unknown flavor"))
 
-        self.listview = QListView()
+        self.listview = QListView(self)
         self.listview.setModel(self.model)
         self.addWidget(self.listview)
 
-        self.treeview = QTreeView()
+        self.treeview = QTreeView(self)
         self.treeview.setAlternatingRowColors(True)
         self.treeview.setModel(self.model)
         self.addWidget(self.treeview)
 
-        self.tableview = QTableView()
+        self.tableview = QTableView(self)
         self.tableview.setModel(self.model)
         self.addWidget(self.tableview)
 

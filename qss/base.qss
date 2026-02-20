@@ -64,18 +64,6 @@ QListView:disabled, QTableView:disabled, QTreeView:disabled {
   selection-background-color: ${viewSelectionDisabledBackgroundColor};
 }
 
-QTreeView::branch:has-siblings:!adjoins-item {
-  border-image: url(cicons:${vlineImageFile}) 0;
-}
-
-QTreeView::branch:has-siblings:adjoins-item {
-  border-image: url(cicons:${branchMoreImageFile}) 0;
-}
-
-QTreeView::branch:!has-children:!has-siblings:adjoins-item {
-  border-image: url(cicons:${branchEndImageFile}) 0;
-}
-
 QTreeView::branch:has-children:!has-siblings:closed,
 QTreeView::branch:closed:has-children:has-siblings {
   border-image: none;
@@ -234,6 +222,27 @@ QComboBox:disabled {
   border: 1px solid ${baseDisabledBorderColor};
 }
 
+QTreeView::item:selected,
+QListView::item:selected {
+    color: ${itemSelectedFontColor};
+    background-color: ${itemSelectedBackgroundColor};
+}
+
+QTreeView::item:selected:!active,
+QListView::item:selected:!active {
+    background-color: ${itemInactiveSelectedBackgroundColor};
+}
+
+QTreeView::item:hover,
+QListView::item:hover {
+    background-color: ${itemHoverBackgroundColor};
+}
+
+QTreeView::item:selected:hover,
+QListView::item:selected:hover {
+    background-color: ${itemSelectedHoverBackgroundColor};
+}
+
 QGroupBox {
   border: 1px solid ${baseBorderColor};
   margin-top: 7px;
@@ -340,16 +349,16 @@ QStatusBar {
 }
 
 QScrollArea {
-  border: none;
+  border-width: 0px;
 }
 
 QScrollBar {
-  background: ${scrollbarBackgroundColor};
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 5px;
 }
 
 QScrollBar:disabled {
-  background: ${scrollbarBackgroundDisabledColor};
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 5px;
 }
 
@@ -382,15 +391,16 @@ QScrollBar::handle:vertical {
 }
 
 QScrollBar::add-line, QScrollBar::sub-line {
-  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-width: 0px;
 }
 
 QScrollBar::add-page, QScrollBar::sub-page {
-  background: ${scrollbarBackgroundColor};
+  background-color: rgba(0, 0, 0, 0);
 }
 
 QAbstractScrollArea::corner {
-  background: ${scrollbarBackgroundColor};
+  background-color: rgba(0, 0, 0, 0);
 }
 
 QDateEdit {

@@ -64,18 +64,6 @@ QListView:disabled, QTableView:disabled, QTreeView:disabled {
   selection-background-color: rgb(230, 239, 253);
 }
 
-QTreeView::branch:has-siblings:!adjoins-item {
-  border-image: url(cicons:vline.png) 0;
-}
-
-QTreeView::branch:has-siblings:adjoins-item {
-  border-image: url(cicons:branch-more.png) 0;
-}
-
-QTreeView::branch:!has-children:!has-siblings:adjoins-item {
-  border-image: url(cicons:branch-end.png) 0;
-}
-
 QTreeView::branch:has-children:!has-siblings:closed,
 QTreeView::branch:closed:has-children:has-siblings {
   border-image: none;
@@ -234,6 +222,27 @@ QComboBox:disabled {
   border: 1px solid rgb(211, 211, 211);
 }
 
+QTreeView::item:selected,
+QListView::item:selected {
+    color: #ffffff;
+    background-color: #3E91EF;
+}
+
+QTreeView::item:selected:!active,
+QListView::item:selected:!active {
+    background-color: #CFCFCF;
+}
+
+QTreeView::item:hover,
+QListView::item:hover {
+    background-color: #7ABDFF;
+}
+
+QTreeView::item:selected:hover,
+QListView::item:selected:hover {
+    background-color: #63ACFF;
+}
+
 QGroupBox {
   border: 1px solid rgb(184, 184, 184);
   margin-top: 7px;
@@ -340,16 +349,16 @@ QStatusBar {
 }
 
 QScrollArea {
-  border: none;
+  border-width: 0px;
 }
 
 QScrollBar {
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 5px;
 }
 
 QScrollBar:disabled {
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 5px;
 }
 
@@ -382,15 +391,16 @@ QScrollBar::handle:vertical {
 }
 
 QScrollBar::add-line, QScrollBar::sub-line {
-  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-width: 0px;
 }
 
 QScrollBar::add-page, QScrollBar::sub-page {
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 QAbstractScrollArea::corner {
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 QDateEdit {

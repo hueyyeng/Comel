@@ -195,6 +195,26 @@ class Preset:
         light="rgb(182, 227, 255)",
         dark="rgb(25, 63, 140)",
     ))
+    itemHoverBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="#7ABDFF",
+        dark="#307ED9",
+    ))
+    itemSelectedFontColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="#ffffff",
+        dark="#111111",
+    ))
+    itemSelectedHoverBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="#63ACFF",
+        dark="#A1C9F7",
+    ))
+    itemSelectedBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="#3E91EF",
+        dark="#7AA9DE",
+    ))
+    itemInactiveSelectedBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
+        light="#CFCFCF",
+        dark="#B0B0B0",
+    ))
     comboboxBackgroundColor: PresetValue = field(default_factory=lambda:PresetValue(
         light="white",
         dark="rgb(85, 90, 95)",
